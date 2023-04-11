@@ -1,0 +1,24 @@
+.time_location_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 1rem 0 ;
+    align-items: center;
+    gap: 1rem;
+
+}
+
+.time {
+    color: white;
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+    font-weight: 200;
+}
+
+.city {
+    color: white;
+    font-weight: bold;
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+    font-weight: 500;
+}

@@ -1,0 +1,44 @@
+.forecast_container {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    margin-top: 1.5rem; 
+}
+
+.forecast_container {
+    color: white;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+ hr {
+    margin-top: 0.5rem; 
+    margin-bottom: 0.5rem;
+}
+
+.forecast_details_main_container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+    margin-bottom: 1rem;
+}
+
+.forecast_details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.hour {
+    font-weight: 300;
+    font-size: 0.875rem;
+    line-height: 1.25rem; 
+}
+
+.forecast_details > img {
+    width: 3rem;
+    margin-top: 0.25rem; 
+    margin-bottom: 0.25rem;
+}

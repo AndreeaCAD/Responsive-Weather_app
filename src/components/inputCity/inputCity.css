@@ -1,0 +1,63 @@
+.container{
+    display: flex;
+    justify-content: center;
+    margin: 1.5rem 0;
+}
+
+.container_input {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 1rem;
+    width: 75%;
+}
+
+.input {
+    font-size: 1.23rem;
+    line-height: 1.75rem;
+    font-weight: 300;
+    padding: 0.5rem;
+    width: 100%;
+    outline: none;
+    border: none;
+    text-transform: capitalize;
+}
+.input::placeholder {
+    text-transform: lowercase;
+}
+
+.sign {
+    color: white;
+    cursor: pointer;
+    padding: 1rem;
+    width: 3rem;
+    height: 3rem;
+    transition: ease-out 5ms;
+}
+
+.sign:hover {
+    transform: scale(1.25);
+}
+
+.container-grades {
+    display: flex;
+    width: 25%;
+    align-items: center;
+    justify-content: center;
+}
+
+.button-grades {
+    color: white;
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+    font-weight: 400;
+    border: none;
+    background: none;
+    margin-left: 0.5rem ;
+    cursor: pointer;
+    transition: ease-out 5ms;
+}
+
+.button-grades:hover {
+    transform: scale(1.25);
+}

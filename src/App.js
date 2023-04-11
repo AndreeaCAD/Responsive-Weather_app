@@ -1,23 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import InputCity from "./components/inputCity/InputCity";
+import TimeAndLocation from "./components/timeAndLocation/TimeAndLocation";
+import TempDetails from "./components/tempDetails/TempDetails";
+import Forecast from "./components/forecast/Forecast";
+import getWeatherData from "./apiService";
 
 function App() {
+  const fetchWeather = async () => {
+    const data = await getWeatherData(44.34, 10.99, "alerts", "imperial");
+    console.log("acestea sunt datele", data);
+  };
+  fetchWeather();
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app">
+      <InputCity />
+      <TimeAndLocation />
+      <TempDetails />
+      <Forecast title="hourly forecast" />
+      <Forecast title="daily forecast" />
     </div>
   );
 }
