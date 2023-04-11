@@ -1,5 +1,6 @@
 
 .app {
+    width: 100%;
     max-width: 430px;
     height: -moz-fit-content;
     height: fit-content;
@@ -7,6 +8,17 @@
     box-shadow: 10px 10px 5px #413e3d;
     border-radius: 10%;
     margin: 80px auto;
-    /* background-image: url(https://cdn.pixabay.com/photo/2018/08/23/07/35/thunderstorm-3625405__340.jpg); */
-    background: linear-gradient(0deg, rgb(5, 5, 171), rgb(102, 102, 202) );
   }
+
+  @media only screen and (max-width: 666px) {
+    .app {
+      max-width: 300px;
+      height: auto;
+      padding: 1.5rem;
+      border-radius: 30px;
+      margin: 40px auto;
+    }
+  }
+
+ 
+

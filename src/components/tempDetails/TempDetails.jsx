@@ -9,34 +9,46 @@ import {
   UilArrowUp,
   UilArrowDown,
 } from "@iconscout/react-unicons";
+import { formatToLocalTime, iconUrlFromCode } from "../../apiService";
 
-function TempDetails() {
+function TempDetails({
+  weather: {
+    details,
+    icon,
+    temp,
+    temp_min,
+    temp_max,
+    sunrise,
+    sunset,
+    speed,
+    humidity,
+    feels_like,
+    timezone,
+  },
+}) {
   return (
     <>
       <div className="temperature_container">
-        <div className="weather_condition">Cloudy</div>
+        <div className="weather_condition">{details}</div>
       </div>
       <div className="temp_main_container">
-        <img
-          src="http://openweathermap.org/img/wn/01d@2x.png"
-          alt="orange-sun"
-        />
-        <div className="temp">30°</div>
+        <img src={iconUrlFromCode(icon)} alt="orange-sun" />
+        <div className="temp">{`${temp.toFixed()}°`}</div>
         <div className="temp_details_container">
           <div className="w_details">
             <UilTemperature />
             Real feel:
-            <span> 32°</span>
+            <span> {`${feels_like.toFixed()}°`}</span>
           </div>
           <div className="w_details">
             <UilTear />
             Humidity:
-            <span>45%</span>
+            <span>{`${humidity.toFixed()}%`}</span>
           </div>
           <div className="w_details">
             <UilWind />
             Wind:
-            <span>11km/h</span>
+            <span>{`${speed.toFixed()} km/h`}</span>
           </div>
         </div>
       </div>
@@ -44,25 +56,25 @@ function TempDetails() {
         <div className="weather_particularity">
           <UilSun />
           <p>
-            Rise:<span>06:45 AM</span>
+            Rise:<span> {formatToLocalTime(sunrise, timezone, "hh:mm a")}</span>
           </p>
         </div>
         <div className="weather_particularity">
           <UilSunset />
           <p>
-            Set:<span>07:30 PM</span>
+            Set:<span>{formatToLocalTime(sunset, timezone, "hh:mm a")}</span>
           </p>
         </div>
         <div className="weather_particularity">
           <UilArrowUp />
           <p>
-            High:<span>30°</span>
+            High:<span>{`${temp_max.toFixed()}°`}</span>
           </p>
         </div>
         <div className="weather_particularity">
           <UilArrowDown />
           <p>
-            Low:<span>24°</span>
+            Low:<span>{`${temp_min.toFixed()}°`}</span>
           </p>
         </div>
       </div>
